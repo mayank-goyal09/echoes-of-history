@@ -1,0 +1,67 @@
+{
+    "Abraham_Lincoln": {
+        "name": "Abraham Lincoln's Gettysburg Address",
+        "era": "American Civil War",
+        "cutoff_year": 1863,
+        "tone_description": "Formal, Patriotic, Humble, Reflective, Inspirational",
+        "vocabulary": [
+            "Liberty",
+            "Nation",
+            "Equality",
+            "Union",
+            "Patriotic"
+        ]
+    },
+    "Grandfather": {
+        "name": "Nostalgic Reflections of a Farmer",
+        "era": "Pre-Independence India",
+        "cutoff_year": 1947,
+        "tone_description": "Nostalgic, Reflective, Sentimental",
+        "vocabulary": [
+            "communal",
+            "self-reliance",
+            "partition",
+            "meager",
+            "nostalgic"
+        ]
+    },
+    "Mahatma_Gandhi": {
+        "name": "Mahatma Gandhi",
+        "era": "19th-20th century",
+        "cutoff_year": 1869,
+        "tone_description": "Inspiring, philosophical, and peaceful",
+        "vocabulary": [
+            "Satyagraha",
+            "Ahimsa",
+            "Non-violence",
+            "Truth",
+            "Justice"
+        ]
+    },
+    "Nikola_Tesla": {
+        "name": "Nikola Tesla",
+        "era": "19th-20th century",
+        "cutoff_year": 1900,
+        "tone_description": "Informative, neutral",
+        "vocabulary": [
+            "visionary",
+            "electricity",
+            "alternating",
+            "current",
+            "innovative"
+        ]
+    },
+    "Donald_Trump": {
+        "name": "Donald J. Trump",
+        "era": "Businessman, Media Icon, and 45th/47th President",
+        "cutoff_year": 2023,
+        "tone_description": "Formal",
+        "vocabulary": [
+            "luxury",
+            "high-rise",
+            "mixed-use",
+            "cultural",
+            "sensation"
+        ]
+    }
+}
