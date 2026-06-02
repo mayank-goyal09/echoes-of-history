@@ -1,0 +1,36 @@
+Nikola Tesla: The Visionary of Electricity
+
+BIOGRAPHY AND EARLY LIFE
+Nikola Tesla was born on July 10, 1856, in the village of Smiljan in the Austrian Empire (modern-day Croatia). He was born during a fierce lightning storm, which led his mother to declare, "He will be a child of light." His father, Milutin Tesla, was a Serbian Orthodox priest, and his mother, Djuka Tesla, was an uneducated but highly intelligent woman who invented domestic household tools and had an exceptional memory for Serbian epic poems.
+
+Tesla studied at the Austrian Polytechnic in Graz and later at the Charles-Ferdinand University in Prague. During his studies at Graz, he became fascinated by physics and electricity. When his professor demonstrated a Gramme dynamo, which produced direct current (DC) but generated massive sparks, Tesla suggested that a system could be designed without brushes, using alternating current (AC). The professor ridiculed him, but Tesla spent the next few years solving the problem in his mind.
+
+EMIGRATION TO AMERICA & THE WAR OF CURRENTS
+In 1884, Tesla emigrated to the United States with only four cents in his pocket, a book of poetry, and a letter of recommendation to Thomas Alva Edison from Edison’s business associate Charles Batchelor. The letter read: "I know two great men and you are one of them; the other is this young man." Edison hired Tesla to work at Edison Machine Works. However, a dispute arose over a promised bonus of $50,000 for redesigning Edison's inefficient direct current dynamos. When Tesla asked for the bonus, Edison reportedly replied, "Tesla, you don't understand our American humor." Tesla resigned immediately.
+
+Tesla partnered with George Westinghouse in 1888. Westinghouse purchased Tesla’s patents for alternating current dynamos, transformers, and motors for $60,000, plus stock and royalties of $2.50 per horsepower. This sparked the infamous "War of Currents" between Edison's DC system and Westinghouse-Tesla's AC system. Edison attempted to discredit AC by publicly electrocuting animals to show it was dangerous. Despite Edison's campaigns, the superiority of AC was demonstrated at the 1893 World's Columbian Exposition in Chicago, where Tesla and Westinghouse illuminated the entire fairgrounds using alternating current. Later, Westinghouse and Tesla harnessed the power of Niagara Falls to build the first major AC hydroelectric power plant in 1896, transmitting power all the way to Buffalo, New York.
+
+INVENTIONS AND DISCOVERIES
+1. Alternating Current (AC) System: Tesla designed polyphase systems of generators, motors, and transformers that allowed electricity to be transmitted over long distances at high voltage and stepped down to safe levels for homes and factories.
+2. Induction Motor: An electric motor that runs on alternating current, using electromagnetic induction to turn the rotor. This eliminated the need for mechanical brushes, making motors highly durable and efficient.
+3. Tesla Coil: Invented in 1891, the Tesla coil is an electrical resonant transformer circuit used to produce high-voltage, low-current, high-frequency alternating-current electricity. It allowed Tesla to conduct pioneering experiments in wireless lighting and electrical power transmission.
+4. Radio and Wireless Communication: Although Guglielmo Marconi was initially credited with the invention of radio, Tesla had patented the basic principles of radio transmitter and receiver circuits in 1897. In 1943, the U.S. Supreme Court overturned Marconi's radio patents, restoring priority to Tesla.
+5. Teleautomation: In 1898, at Madison Square Garden, Tesla demonstrated a remote-controlled boat (which he called a "teleautomaton") using radio waves. This was the birth of robotics and remote control technology.
+
+COLORADO SPRINGS AND WARDENCLYFFE TOWER
+In 1899, Tesla relocated to Colorado Springs, where he set up a high-voltage experimental laboratory. There, he built a massive magnifying transmitter. He succeeded in lighting 200 lamps wirelessly at a distance of 26 miles and claimed to have detected stationary waves within the Earth, proving the Earth itself could act as a conductor. He also claimed to have received signals from Mars or another extraterrestrial source.
+
+Returning to New York, Tesla convinced financier J.P. Morgan to fund the construction of Wardenclyffe Tower in Shoreham, Long Island. Tesla envisioned it as a prototype for a "World Wireless System" that would transmit news, messages, stock reports, and free electrical energy across the globe. However, as costs escalated and Marconi successfully transmitted signals across the Atlantic, Morgan withdrew funding. The project was abandoned, and the tower was demolished for scrap metal during World War I in 1917.
+
+PERSONALITY, QUIRKS, AND STOIC PHILOSOPHY
+Tesla was an eccentric man with highly specific routines. He claimed to sleep only two hours a night, though he occasionally took daytime naps. He possessed a photographic memory and could visualize complex inventions in three dimensions in his head, building and testing them entirely in his mind before putting pen to paper. 
+
+He was famously obsessed with the numbers 3, 6, and 9, and would walk around a building three times before entering. He had a severe germaphobia, polished his dinnerware with 18 napkins, and hated touching hair or wearing round pearl earrings. In his later years, he developed a deep affection for New York's pigeons, particularly a specific white female pigeon whom he loved "as a man loves a woman."
+
+Tesla lived his final decades at the New Yorker Hotel, living in room 3327 on the 33rd floor. He spent his time feeding pigeons and designing theoretical weapons, such as a particle beam weapon he called the "Teleforce" (which the media dubbed the "Death Ray"). He died alone in his hotel room on January 7, 1943, at the age of 86. After his death, the U.S. government's Office of Alien Property custodian seized his papers and scientific trunks, which were later examined by MIT professor John G. Trump (the uncle of Donald Trump), who concluded that Tesla's recent papers did not contain workable principles for weapons.
+
+QUOTES AND PHILOSOPHY
+- "The present is theirs; the future, for which I really worked, is mine."
+- "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration."
+- "My brain is only a receiver, in the Universe there is a core from which we obtain knowledge, strength and inspiration."
+- "The scientific man does not aim at an immediate result. He does not expect that his advanced ideas will be readily taken up. His duty is to lay the foundation for those who are to come, and point the way."
