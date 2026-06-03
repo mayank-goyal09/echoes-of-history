@@ -25,6 +25,11 @@ Step into the past and chat with historical personas! This is a Retrieval-Augmen
 - **Interactive Lab**: Discover and register new personas dynamically by adding their source writings to `source_data/`.
 
 ## Running on Hugging Face Spaces
-This app is optimized for Hugging Face Spaces and runs using the free serverless Hugging Face Inference API.
-- **Model**: `Qwen/Qwen2.5-7B-Instruct` (or any custom open-source instruction model).
-- **Authentication**: On Hugging Face Spaces, it automatically uses the `HF_TOKEN` environment variable injected by the Space.
+This app is fully compatible with Hugging Face Spaces and runs using the Streamlit SDK.
+
+### Configuration
+Since the app uses Groq for fast inference, you need to add your Groq API Key as a repository secret:
+1. Go to your **Space Settings** on Hugging Face.
+2. Scroll down to **Variables and Secrets** and click **New Secret**.
+3. Name the secret `GROQ_API_KEY` and paste your Groq API key (e.g. `gsk_...`) as the value.
+4. Save the secret and restart your Space if it is already running. The app will automatically read it and start functioning!
