@@ -1,4 +1,6 @@
 import os
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+
 import json
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq

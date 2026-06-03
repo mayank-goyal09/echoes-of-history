@@ -1,6 +1,8 @@
+import os
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+
 import streamlit as st
 import json
-import os
 import time
 from engine import HistoricalEngine
 
