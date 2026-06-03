@@ -1,11 +1,9 @@
 import os
-os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
-
 import json
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
@@ -60,7 +58,11 @@ class HistoricalEngine:
         
         # Initialize Vectorstore only if persona_id is provided
         if persona_id:
-            self.vectorstore = Chroma(persist_directory=f"./db/{persona_id}", embedding_function=self.embeddings)
+            faiss_path = f"./faiss_db/{persona_id}"
+            if os.path.exists(faiss_path):
+                self.vectorstore = FAISS.load_local(faiss_path, self.embeddings, allow_dangerous_deserialization=True)
+            else:
+                self.vectorstore = None
         
         # Simple memory - no langchain dependency!
         self.memory = SimpleWindowMemory(k=5)
@@ -78,11 +80,13 @@ class HistoricalEngine:
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
         chunks = text_splitter.split_documents(all_docs)
         
-        self.vectorstore = Chroma.from_documents(
+        self.vectorstore = FAISS.from_documents(
             documents=chunks, 
-            embedding=self.embeddings, 
-            persist_directory=f"./db/{persona_id}"
+            embedding=self.embeddings
         )
+        # Save the FAISS index to disk
+        faiss_path = f"./faiss_db/{persona_id}"
+        self.vectorstore.save_local(faiss_path)
         return all_docs[0].page_content[:2000]  # Return sample for profiling
 
     def auto_profile(self, sample_text):

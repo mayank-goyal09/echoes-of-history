@@ -1,6 +1,4 @@
 import os
-os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
-
 import json
 from engine import HistoricalEngine
 
