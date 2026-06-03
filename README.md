@@ -24,12 +24,17 @@ Step into the past and chat with historical personas! This is a Retrieval-Augmen
 - **Aesthetic Vintage UI**: Beautiful vintage parchment theme with micro-animations.
 - **Interactive Lab**: Discover and register new personas dynamically by adding their source writings to `source_data/`.
 
-## Running on Hugging Face Spaces
-This app is fully compatible with Hugging Face Spaces and runs using the Streamlit SDK.
+## Running on Streamlit Community Cloud
+This app is optimized for Streamlit Community Cloud. 
 
-### Configuration
-Since the app uses Groq for fast inference, you need to add your Groq API Key as a repository secret:
-1. Go to your **Space Settings** on Hugging Face.
-2. Scroll down to **Variables and Secrets** and click **New Secret**.
-3. Name the secret `GROQ_API_KEY` and paste your Groq API key (e.g. `gsk_...`) as the value.
-4. Save the secret and restart your Space if it is already running. The app will automatically read it and start functioning!
+### How to Add your Groq API Key
+To make sure the app can run securely without exposing your credentials:
+1. Go to your [Streamlit Share Dashboard](https://share.streamlit.io/).
+2. Locate your deployed app, click the three dots (`...`) on the right, and select **Settings**.
+3. In the settings menu, click on the **Secrets** tab.
+4. Paste your Groq API Key in TOML format:
+   ```toml
+   GROQ_API_KEY = "your_groq_api_key_here"
+   ```
+5. Click **Save**. Streamlit will automatically restart the app with the credentials injected!
+
