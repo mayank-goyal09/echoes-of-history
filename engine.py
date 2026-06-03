@@ -1,8 +1,7 @@
 import os
 import json
 from dotenv import load_dotenv
-from langchain_groq import ChatGroq
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings, HuggingFaceEndpoint
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -52,7 +51,23 @@ class SimpleWindowMemory:
 
 class HistoricalEngine:
     def __init__(self, persona_id=None):
-        self.llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0.2)
+        # We use a free, robust open-source model hosted via Serverless Inference API.
+        # Qwen2.5-7B-Instruct is highly capable at instructions and formatting.
+        model_name = os.environ.get("HF_MODEL_NAME", "Qwen/Qwen2.5-7B-Instruct")
+        
+        # HuggingFaceEndpoint will look for HUGGINGFACEHUB_API_TOKEN or HF_TOKEN in the environment
+        # HF_TOKEN is automatically set in Hugging Face Spaces.
+        hf_token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACEHUB_API_TOKEN")
+        if hf_token and "HUGGINGFACEHUB_API_TOKEN" not in os.environ:
+            os.environ["HUGGINGFACEHUB_API_TOKEN"] = hf_token
+
+        self.llm = HuggingFaceEndpoint(
+            repo_id=model_name,
+            task="text-generation",
+            max_new_tokens=512,
+            temperature=0.2,
+            huggingfacehub_api_token=hf_token
+        )
         self.embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
         self.persona_id = persona_id
         
@@ -97,8 +112,9 @@ class HistoricalEngine:
         KEYS: name, era, cutoff_year, tone_description, vocabulary (list of 5 words)
         """
         response = self.llm.invoke(extraction_prompt)
+        response_text = response.content if hasattr(response, 'content') else str(response)
         # Clean the response to ensure it's valid JSON
-        clean_content = response.content.strip().replace("```json", "").replace("```", "")
+        clean_content = response_text.strip().replace("```json", "").replace("```", "")
         return json.loads(clean_content)
 
     def ask(self, question, persona_details):
@@ -119,11 +135,12 @@ class HistoricalEngine:
         )
         
         response = self.llm.invoke(final_prompt)
+        response_content = response.content if hasattr(response, 'content') else str(response)
         
         # Save to our simple memory
-        self.memory.add(question, response.content)
+        self.memory.add(question, response_content)
         
-        return response.content
+        return response_content
 
     def get_context(self, question):
         try:
