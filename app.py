@@ -279,10 +279,31 @@ def inject_css():
         50%      { opacity: 1; }
     }
 
-    /* === HIDE STREAMLIT DEFAULTS === */
+    /* === HIDE STREAMLIT DEFAULTS & KEEP SIDEBAR TOGGLE === */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
+    header {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        height: 3.5rem;
+    }
+    [data-testid="stAppDeployButton"], 
+    [data-testid="stToolbar"], 
+    [data-testid="stDecoration"] {
+        display: none !important;
+    }
+    /* Style the sidebar toggle button for vintage look */
+    [data-testid="collapsedControl"] {
+        background-color: #fff9ed !important;
+        border: 1px solid #8b6914 !important;
+        border-radius: 4px !important;
+        margin: 10px !important;
+        box-shadow: 2px 2px 5px rgba(44,24,16,0.15) !important;
+    }
+    [data-testid="collapsedControl"] button {
+        color: #2c1810 !important;
+    }
+
 
     /* === CHAT INPUT STYLING === */
     .stChatInput, [data-testid="stChatInput"] {
