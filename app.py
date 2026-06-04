@@ -282,27 +282,43 @@ def inject_css():
     /* === HIDE STREAMLIT DEFAULTS & KEEP SIDEBAR TOGGLE === */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {
+    header[data-testid="stHeader"] {
+        visibility: visible !important;
         background-color: transparent !important;
         box-shadow: none !important;
-        height: 3.5rem;
+        display: flex !important;
+        z-index: 99999 !important;
     }
     [data-testid="stAppDeployButton"], 
     [data-testid="stToolbar"], 
     [data-testid="stDecoration"] {
         display: none !important;
     }
-    /* Style the sidebar toggle button for vintage look */
+    /* Force visibility and styling of the sidebar toggle button */
     [data-testid="collapsedControl"] {
+        visibility: visible !important;
+        display: block !important;
         background-color: #fff9ed !important;
-        border: 1px solid #8b6914 !important;
-        border-radius: 4px !important;
+        border: 2px solid #8b6914 !important;
+        border-radius: 6px !important;
         margin: 10px !important;
-        box-shadow: 2px 2px 5px rgba(44,24,16,0.15) !important;
+        box-shadow: 2px 2px 8px rgba(44,24,16,0.2) !important;
+        z-index: 100000 !important;
+        opacity: 1 !important;
     }
     [data-testid="collapsedControl"] button {
         color: #2c1810 !important;
+        background-color: transparent !important;
+        border: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
+    [data-testid="collapsedControl"] svg {
+        fill: #2c1810 !important;
+        color: #2c1810 !important;
+        stroke: #2c1810 !important;
+    }
+
 
 
     /* === CHAT INPUT STYLING === */
